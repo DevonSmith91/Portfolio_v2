@@ -1,0 +1,20 @@
+// Breakpoints
+
+$bp-xs: "min-width: 375px" !default;
+$bp-sm: "min-width: 512px" !default;
+$bp-md: "min-width: 768px" !default;
+$bp-lg: "min-width: 1024px" !default;
+$bp-xl: "min-width: 1280px" !default;
+$bp-xxl: "min-width: 1440px" !default;
+
+// Backgrounds
+$primary-background: #f7f7f7 !default;
+
+// Text
+$primary-text-color: #2c3e50 !default;
+
+// Links
+$primary-link-color: #063351 !default;
+$primary-link-hover: #2980b9 !default;
+$primary-link-active: #2980b9 !default;
+$primary-link-disabled: red !default;

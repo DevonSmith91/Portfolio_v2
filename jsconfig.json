@@ -1,7 +1,17 @@
 {
   "compilerOptions": {
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@components/*": ["src/components/*"],
+      "@api/*": ["src/api/*"],
+      "@styles/*": ["src/styles/*"],
+      // "@config/*": ["src/config/*"],
+      // "@context/*": ["src/context/*"],
+      // "@graphql/*": ["src/components/graphql/*"],
+      // "@icons/*": ["src/icons/*"],
+      // "@services/*": ["src/services/*"],
+      // "@utils/*": ["src/utils/*"]
     }
   }
 }

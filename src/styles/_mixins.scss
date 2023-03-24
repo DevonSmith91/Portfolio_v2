@@ -1,0 +1,19 @@
+@import "./variables";
+
+@mixin primaryLink() {
+  cursor: pointer;
+  color: $primary-text-color;
+  &:hover,
+  &:focus {
+    color: $primary-link-hover;
+  }
+  &:active {
+    color: $primary-link-active;
+  }
+}
+
+@mixin navLink() {
+  @include primaryLink();
+  font-size: 2rem;
+  line-height: 2.4rem;
+}
