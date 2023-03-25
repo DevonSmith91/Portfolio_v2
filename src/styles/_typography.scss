@@ -151,10 +151,10 @@ small,
 
 a,
 .link {
-	@include navLink();
+	@include primaryLink();
   text-decoration: none;
-  &.secondary {
-    // @include secondaryLink();
+  &.navLink {
+    @include navLink();
   }
   &.bold {
     // @include boldLink();

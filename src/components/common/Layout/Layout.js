@@ -1,12 +1,13 @@
 import styles from "./Layout.module.scss";
-import { Header } from "@components/common";
+import { Header, Footer } from "@components/common";
 
 const Layout = ({ children }) => {
   return (
-    <>
+    <div className={styles.layout}>
       <Header />
-      {children}
-    </>
+			<main>{children}</main>
+			<Footer />
+    </div>
   );
 };
 

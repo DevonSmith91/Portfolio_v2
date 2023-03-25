@@ -1,14 +1,21 @@
-// import styles from '@/styles/Home.module.css'
-import { Header, Layout } from "@components/common";
+import styles from "@/styles/Home.module.scss";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <h1>Hello World</h1>
-      <div>standard text size</div>
-      <p>ptag size</p>
-    </>
+    <homepage className={styles.homepage}>
+      <div className={styles.heroImage}>
+        <div className={styles.placeholderImg}>Placeholder Image</div>
+      </div>
+      <div className={styles.heroText}>
+        <div className={styles.heroTextContent}>
+          <h1>Devon Smith</h1>
+          <p>
+            Crafting captivating designs with meticulous attention to detail,
+            backed by extensive experience in frontend web development.
+          </p>
+          <button>Resume</button>
+        </div>
+      </div>
+    </homepage>
   );
 }
-
-// Home.Layout = Layout;

@@ -1,0 +1,12 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  height: 5rem;
+  .contactButton {
+    flex: 1;
+    margin: 0 auto;
+  }
+  .socialIcons {
+    flex: 1;
+  }
+}

@@ -7,7 +7,11 @@ const Navbar = () => {
     <navbar className={styles.navbar}>
       {links.map((link, index) => {
         return (
-          <Link href={link.toLowerCase()} className={styles.navLink}>
+          <Link
+            key={index}
+            href={link.toLowerCase()}
+            className={`${styles.navLink} navLink`}
+          >
             {link}
           </Link>
         );

@@ -3,21 +3,22 @@
 .navbar {
   display: flex;
   width: 45%;
+	height: 4.8rem;
   justify-content: space-between;
-  padding: 1.8rem 2.4rem;
+  padding: 0 2.4rem 1.8rem;
   position: relative;
-  text-decoration: none;
   :first-of-type {
     padding-left: 5%;
   }
-  ::after {
-    background: #c1c1c1;
-    background: linear-gradient(to right, transparent 0%, #c1c1c1 50%);
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 1px;
-    width: 100%;
-  }
+}
+
+.navbar::after {
+  background: #c1c1c1;
+  background: linear-gradient(to right, transparent 0%, #c1c1c1 50%);
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
 }

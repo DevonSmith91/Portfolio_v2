@@ -6,10 +6,10 @@
       "@components/*": ["src/components/*"],
       "@api/*": ["src/api/*"],
       "@styles/*": ["src/styles/*"],
+      "@images/*": ["src/images/*"],
       // "@config/*": ["src/config/*"],
       // "@context/*": ["src/context/*"],
       // "@graphql/*": ["src/components/graphql/*"],
-      // "@icons/*": ["src/icons/*"],
       // "@services/*": ["src/services/*"],
       // "@utils/*": ["src/utils/*"]
     }
