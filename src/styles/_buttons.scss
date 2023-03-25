@@ -1,7 +1,7 @@
 @import "./variables";
 
 .button,
-button:not(.react-share__ShareButton),
+button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
@@ -16,13 +16,14 @@ input[type="button"] {
   font-size: 1.6rem;
   line-height: 2.2rem;
   letter-spacing: -0.02em;
+  font-weight: 500;
   border: none;
   z-index: 1;
   margin-bottom: 2.4rem;
   background-color: $primary-button-background-color;
-	color: $primary-button-text-color;
-  border-radius: .5rem;
-	max-width: 20rem;
+  color: $primary-button-text-color;
+  border-radius: 0.5rem;
+  max-width: 15rem;
   &:hover,
   &:focus {
     background-color: $primary-button-hover;
@@ -30,34 +31,50 @@ input[type="button"] {
   &:active {
     background-color: $primary-button-active;
   }
+  &.text-button {
+    @include primaryLink();
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+    height: auto;
+    min-height: 0;
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+  &.primary-outline {
+    background-color: transparent;
+    color: $outline-button-text-color;
+    border: 1px solid $outline-button-border-color;
+    &:hover,
+    &:focus {
+			color: $outline-button-active-text-color;
+      background-color: $outline-button-hover-background-color;
+    }
+    &:active {
+			color: $outline-button-active-text-color;
+      background-color: $outline-button-hover-background-active;
+    }
+  }
+
   // &.disabled {
-    // color: $disabled-button-color;
-    // background-color: $disabled-button-background;
-    // border: 1px solid $disabled-button-border;
-    // pointer-events: none;
+  // color: $disabled-button-color;
+  // background-color: $disabled-button-background;
+  // border: 1px solid $disabled-button-border;
+  // pointer-events: none;
   // }
   // &.primary-outline {
   //   @include primaryLink();
-    // background-color: $background-color;
-    // border: 1px solid;
-    // border-color: $primary-color;
-    // &:hover,
-    // &:focus {
-      // border-color: $primary-color-hover;
-    // }
-    // &:active {
-      // border-color: $primary-color-active;
-  //   }
+  // background-color: $background-color;
+  // border: 1px solid;
+  // border-color: $primary-color;
+  // &:hover,
+  // &:focus {
+  // border-color: $primary-color-hover;
   // }
-
-  // &.text-button {
-  //   @include primaryLink();
-  //   background-color: transparent;
-  //   border: none;
-  //   padding: 0;
-  //   margin: 0;
-  //   width: auto;
-  //   height: auto;
-  //   min-height: 0;
+  // &:active {
+  // border-color: $primary-color-active;
+  //   }
   // }
 }

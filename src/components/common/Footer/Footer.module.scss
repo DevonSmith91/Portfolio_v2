@@ -1,12 +1,17 @@
+@import "@styles/mixins.scss";
+
 .footer {
-  display: flex;
-  justify-content: space-between;
-  height: 5rem;
-  .contactButton {
-    flex: 1;
-    margin: 0 auto;
-  }
-  .socialIcons {
-    flex: 1;
+  align-items: center;
+  margin: 2.4rem;
+  .socialIconsContainer {
+    display: flex;
+    .icon {
+      @include primaryLink();
+      height: 2.5rem;
+      width: 2.5rem;
+			&:first-of-type{
+				margin-right: 2rem;
+			}
+    }
   }
 }

@@ -1,8 +1,7 @@
 import styles from "./Header.module.scss";
 import Link from "next/link";
 import { Navbar } from "@components/common";
-import DSLogo from "@images/DSLogo.svg";
-import Image from "next/image";
+import DSLogo from "@images/DSLogo.js";
 
 // TODO: Animate Navbar to slide right when scrolling
 // slide back in when scrolling up
@@ -15,7 +14,9 @@ const Header = () => {
     <header className={styles.header}>
       <div className={styles.logoContainer}>
         <Link href="/">
-          <Image src={DSLogo} height={70} width={70} />
+          <div className={styles.logo}>
+            <DSLogo />
+          </div>
         </Link>
       </div>
       <Navbar />

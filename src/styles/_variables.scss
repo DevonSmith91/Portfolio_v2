@@ -18,9 +18,15 @@ $primary-link-color: #063351 !default;
 $primary-link-hover: #2980b9 !default;
 $primary-link-active: #2980b9 !default;
 $primary-link-disabled: red !default;
+$svg-image-link-color: #063351 !default;
 
 // Buttons
 $primary-button-background-color: #c04e01 !default;
 $primary-button-text-color: #ffffff !default;
 $primary-button-hover: #d57636 !default;
 $primary-button-active: #e78c4f !default;
+$outline-button-text-color: #c04e01 !default;
+$outline-button-border-color: #c04e01 !default;
+$outline-button-hover-background-color: #c04e01 !default;
+$outline-button-hover-background-active: #d57636 !default;
+$outline-button-active-text-color: #ffffff !default;

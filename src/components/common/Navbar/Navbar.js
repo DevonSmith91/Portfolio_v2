@@ -4,7 +4,7 @@ import Link from "next/link";
 const Navbar = () => {
   const links = ["About", "Portfolio", "Skills", "Contact"];
   return (
-    <navbar className={styles.navbar}>
+    <nav className={styles.navbar}>
       {links.map((link, index) => {
         return (
           <Link
@@ -16,7 +16,7 @@ const Navbar = () => {
           </Link>
         );
       })}
-    </navbar>
+    </nav>
   );
 };
 

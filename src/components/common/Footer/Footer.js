@@ -1,16 +1,18 @@
 import styles from "./Footer.module.scss";
+import GithubIcon from "@images/GithubIcon.js";
+import LinkedinLogo from "@/images/LinkedinLogo.js";
 
 const Footer = () => {
-  const handleTalk = () => {
-    console.log("clicked");
-  };
-
   return (
     <footer className={styles.footer}>
-      <div className={styles.contactButton}>
-        <button onClick={handleTalk()}>Let's Talk</button>
+      <div className={styles.socialIconsContainer}>
+        <div className={styles.icon}>
+          <GithubIcon />
+        </div>
+        <div className={styles.icon}>
+          <LinkedinLogo />
+        </div>
       </div>
-      <div className={styles.socialIcons}>test</div>
     </footer>
   );
 };

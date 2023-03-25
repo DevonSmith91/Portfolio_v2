@@ -3,16 +3,12 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-	padding: 0 2rem;
+	padding: 0 2.4rem;
   .heroImage {
-		width: 50%;
-		height: 50rem;
-		.placeholderImg {
-			background-color: lightgray;
-			width: 80%;
-			min-height: 100%;
-			margin: 0 auto;
-		}
+		// width: 50%;
+		// height: 50rem;
+		// background-color: lightgray;
+		
 	}
   .heroText {
 		width: 50%;
@@ -21,6 +17,12 @@
 		.heroTextContent {
 			width: 80%;
 			margin: 0 auto;
+			.buttonContainer {
+				display: flex;
+				:first-child {
+					margin-right: 2rem;
+				}
+			}
 		}
   }
 }
