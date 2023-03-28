@@ -1,24 +1,91 @@
 @import "@styles/variables.scss";
+@import "@styles/mixins.scss";
 
 .navbar {
-  display: flex;
-  width: 45%;
-	height: 4.8rem;
-  justify-content: space-between;
-  padding: 0 2.4rem 1.8rem;
-  position: relative;
-  :first-of-type {
-    padding-left: 5%;
+  @media ($bp-sm) {
+    width: 75%;
   }
-}
-
-.navbar::after {
-  background: #c1c1c1;
-  background: linear-gradient(to right, transparent 0%, #c1c1c1 50%);
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
+  @media ($bp-md) {
+    width: 65%;
+  }
+  @media ($bp-lg) {
+    width: 55%;
+  }
+  .hamburgerContainer {
+    cursor: pointer;
+    position: relative;
+    width: 4rem;
+    height: 4rem;
+    transition-duration: 0.5s;
+    @media ($bp-sm) {
+      display: none;
+    }
+    .hamInner {
+      transition-duration: 0.5s;
+      position: absolute;
+      height: 0.2rem;
+      width: 4rem;
+      top: 50%;
+      background-color: $primary-link-color;
+      border-radius: 0.2rem;
+      &::before,
+      &::after {
+        content: "";
+        border-radius: 0.2rem;
+        transition-duration: 0.5s;
+        position: absolute;
+        width: 4rem;
+        height: 0.2rem;
+        background-color: $primary-link-color;
+        right: 0;
+      }
+      &::before {
+        width: 4.5rem;
+        top: -1.2rem;
+      }
+      &::after {
+        width: 3.5rem;
+        top: 1.2rem;
+      }
+    }
+    &:hover,
+    &:focus {
+      .hamInner,
+      .hamInner::before,
+      .hamInner::after {
+        background-color: $primary-link-hover;
+      }
+    }
+    &:active {
+      .hamInner,
+      .hamInner::before,
+      .hamInner::after {
+        background-color: $primary-link-active;
+      }
+    }
+    &.open {
+      .hamInner {
+        transition-duration: 0.5s;
+        transform: rotateZ(-180deg);
+        &::before {
+          width: 4rem;
+          right: -0.3rem;
+          top: -1.6rem;
+          transform: rotateZ(-45deg) scaleX(0.75) translate(-20px, -6px);
+        }
+        &::after {
+          width: 4rem;
+          right: -0.3rem;
+          top: 1.6rem;
+          transform: rotateZ(45deg) scaleX(0.75) translate(-20px, 6px);
+        }
+      }
+    }
+  }
+	.desktopNav {
+		display: none;
+		@media ($bp-sm){
+			display: block;
+		}
+	}
 }

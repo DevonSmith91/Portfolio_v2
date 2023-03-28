@@ -1,21 +1,29 @@
 import styles from "./Navbar.module.scss";
-import Link from "next/link";
+import cn from "classnames";
+import NavLinks from "../NavLinks/NavLinks";
 
-const Navbar = () => {
-  const links = ["About", "Portfolio", "Skills", "Contact"];
+const Navbar = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
+  const handleSideMenu = (event, isSideMenuOpen) => {
+    setIsSideMenuOpen(!isSideMenuOpen);
+    event.target.blur();
+  };
+
+  const sideMenuClass = isSideMenuOpen ? styles.open : "";
+
   return (
     <nav className={styles.navbar}>
-      {links.map((link, index) => {
-        return (
-          <Link
-            key={index}
-            href={link.toLowerCase()}
-            className={`${styles.navLink} navLink`}
-          >
-            {link}
-          </Link>
-        );
-      })}
+      <div
+        ref={buttonRef}
+        onClick={(event) => handleSideMenu(event, isSideMenuOpen)}
+        role="button"
+        tabIndex={0}
+        className={cn(styles.hamburgerContainer, sideMenuClass)}
+      >
+        <div className={`${styles.hamInner}`} />
+      </div>
+      <div className={styles.desktopNav}>
+        <NavLinks />
+      </div>
     </nav>
   );
 };

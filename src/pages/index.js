@@ -12,11 +12,14 @@ export default function HomePage() {
       <div className={styles.heroImage}>
         <Image
           src={CodeBlock}
-          // fill="responsive"
-          // sizes={"76.8rem"}
-          // height={(videoImage.height * 768) / videoImage.width}
-          width={500}
+          fill="responsive"
           quality={90}
+          alt="Hero Image of a code block"
+          priority
+          // TODO: Sort out these sizes
+          // sizes="(max-width: 768px) 100vw,
+          //     (max-width: 1200px) 50vw,
+          //     33vw"
         />
       </div>
       <div className={styles.heroText}>

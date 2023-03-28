@@ -3,26 +3,27 @@
   flex-grow: 1;
   justify-content: center;
   align-items: center;
-	padding: 0 2.4rem;
+  padding: 0 2.4rem;
   .heroImage {
-		// width: 50%;
-		// height: 50rem;
-		// background-color: lightgray;
-		
-	}
+    position: relative;
+    width: 50%;
+    height: 50rem;
+    background-color: lightgray;
+		margin-left: 2.3rem;
+  }
   .heroText {
-		width: 50%;
+    width: 50%;
     display: flex;
-		flex-direction: column;
-		.heroTextContent {
-			width: 80%;
-			margin: 0 auto;
-			.buttonContainer {
-				display: flex;
-				:first-child {
-					margin-right: 2rem;
-				}
-			}
-		}
+    flex-direction: column;
+    .heroTextContent {
+      width: 80%;
+      margin: 0 auto;
+      .buttonContainer {
+        display: flex;
+        :first-child {
+          margin-right: 2rem;
+        }
+      }
+    }
   }
 }
