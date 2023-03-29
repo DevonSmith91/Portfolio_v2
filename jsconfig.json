@@ -7,8 +7,8 @@
       "@api/*": ["src/api/*"],
       "@styles/*": ["src/styles/*"],
       "@images/*": ["src/images/*"],
+      "@context/*": ["src/context/*"]
       // "@config/*": ["src/config/*"],
-      // "@context/*": ["src/context/*"],
       // "@graphql/*": ["src/components/graphql/*"],
       // "@services/*": ["src/services/*"],
       // "@utils/*": ["src/utils/*"]

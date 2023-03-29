@@ -1,8 +1,24 @@
-import styles from "@/styles/Home.module.scss";
+import { useEffect, useState } from "react";
+import styles from "@styles/Home.module.scss";
 import Image from "next/image";
 import CodeBlock from "@images/CodeBlock.jpg";
+import { useAppContext } from "@components/context/AppContext";
 
 export default function HomePage() {
+  const [resumeButtonStyles, setResumeButtonStyles] =
+    useState("primary-outline");
+  const { windowWidth } = useAppContext();
+
+  useEffect(() => {
+    if (windowWidth >= 768) {
+      setResumeButtonStyles("");
+    } else {
+      if (resumeButtonStyles !== "primary-outline") {
+        setResumeButtonStyles("primary-outline");
+      }
+    }
+  }, [windowWidth]);
+
   const porfolioName = "Devon Smith";
   const heroTextContent =
     "Crafting captivating designs with meticulous attention to detail, backed by extensive experience in frontend web development.";
@@ -31,7 +47,7 @@ export default function HomePage() {
         </div>
         <div className={styles.buttonContainer}>
           <div className={styles.buttonWrapper}>
-            <button className={`primary-outline`}>Resume</button>
+            <button className={`${resumeButtonStyles}`}>Resume</button>
             <button className={`primary-outline`}>Let's Chat</button>
           </div>
         </div>

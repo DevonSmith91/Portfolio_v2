@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import styles from "./Layout.module.scss";
 import { Header, Footer, SideMenu } from "@components/common";
-import getWindowWidth from "@/utils/getWindowWidth";
+import { useAppContext } from "@/components/context/AppContext";
 
 const Layout = ({ children }) => {
   const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
-  const windowWidth = getWindowWidth();
+  const { windowWidth } = useAppContext();
 
   useEffect(() => {
     if (windowWidth >= 512) {

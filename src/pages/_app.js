@@ -1,11 +1,13 @@
 import "@/styles/globals.scss";
 import { Layout } from "@/components/common";
+import { AppContextProvider } from "@/components/context/AppContext";
 
-// Do some searching on what this does
 export default function App({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <AppContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AppContextProvider>
   );
 }
