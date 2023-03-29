@@ -12,7 +12,7 @@ input[type="button"] {
   text-align: center;
   width: 100%;
   min-height: 5rem;
-  padding: 1.6rem 3.2rem 1.4rem;
+  padding: 1.6rem 1.6rem 1.4rem;
   font-size: 1.6rem;
   line-height: 2.2rem;
   letter-spacing: -0.02em;
@@ -24,6 +24,7 @@ input[type="button"] {
   color: $primary-button-text-color;
   border-radius: 0.5rem;
   max-width: 15rem;
+  white-space: nowrap;
   &:hover,
   &:focus {
     background-color: $primary-button-hover;
@@ -49,11 +50,11 @@ input[type="button"] {
     border: 1px solid $outline-button-border-color;
     &:hover,
     &:focus {
-			color: $outline-button-active-text-color;
+      color: $outline-button-active-text-color;
       background-color: $outline-button-hover-background-color;
     }
     &:active {
-			color: $outline-button-active-text-color;
+      color: $outline-button-active-text-color;
       background-color: $outline-button-hover-background-active;
     }
   }

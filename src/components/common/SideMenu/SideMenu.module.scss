@@ -4,9 +4,23 @@
 .sideMenuContainer {
   position: absolute;
   background-color: $primary-background;
+	top: 9.7rem;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 10;
-  height: calc(100% - 9.8rem);
+  height: calc(100vh - 9.8rem);
+  transition: 0.4s ease;
+  @media ($bp-sm) {
+    display: none;
+  }
+}
+.open {
+  left: 0;
+  opacity: 1;
+}
+
+.close {
+  left: 150%;
+  opacity: 0;
 }

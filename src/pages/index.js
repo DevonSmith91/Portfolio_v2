@@ -22,11 +22,15 @@ export default function HomePage() {
           //     33vw"
         />
       </div>
-      <div className={styles.heroText}>
-        <div className={styles.heroTextContent}>
-          <h1>{porfolioName}</h1>
-          <p>{heroTextContent}</p>
-          <div className={styles.buttonContainer}>
+      <div className={styles.heroAction}>
+        <div className={styles.heroText}>
+          <div className={styles.heroTextContent}>
+            <h1>{porfolioName}</h1>
+            <p>{heroTextContent}</p>
+          </div>
+        </div>
+        <div className={styles.buttonContainer}>
+          <div className={styles.buttonWrapper}>
             <button className={`primary-outline`}>Resume</button>
             <button className={`primary-outline`}>Let's Chat</button>
           </div>

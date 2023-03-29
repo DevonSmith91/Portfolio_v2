@@ -13,7 +13,6 @@ const Navbar = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
   return (
     <nav className={styles.navbar}>
       <div
-        ref={buttonRef}
         onClick={(event) => handleSideMenu(event, isSideMenuOpen)}
         role="button"
         tabIndex={0}

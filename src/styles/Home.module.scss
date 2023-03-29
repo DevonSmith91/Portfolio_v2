@@ -1,27 +1,75 @@
+@import "@styles/variables.scss";
+
 .homepage {
   display: flex;
+  flex-direction: column;
   flex-grow: 1;
-  justify-content: center;
-  align-items: center;
-  padding: 0 2.4rem;
+  justify-content: space-between;
+  @media ($bp-md) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2.4rem;
+  }
   .heroImage {
     position: relative;
-    width: 50%;
-    height: 50rem;
+    height: 40rem;
     background-color: lightgray;
-		margin-left: 2.3rem;
+    @media ($bp-md) {
+      width: 50%;
+      height: 50rem;
+      margin-left: 2.3rem;
+    }
   }
+	.heroAction{
+		width: 100%;
+	}
   .heroText {
-    width: 50%;
     display: flex;
     flex-direction: column;
+    position: absolute;
+    background-color: $primary-textblock-background-80;
+    box-shadow: 0.7rem 0.5rem 2rem $primary-textblock-shadow;
+    bottom: 27%;
+    left: 5%;
+    width: 90%;
+    padding: 1.2rem;
+    @media ($bp-sm) {
+      width: 60%;
+      left: 30%;
+    }
+    @media ($bp-md) {
+      width: 90%;
+			margin: 0 auto 3.6rem;
+      position: unset;
+    }
     .heroTextContent {
       width: 80%;
       margin: 0 auto;
-      .buttonContainer {
-        display: flex;
-        :first-child {
-          margin-right: 2rem;
+    }
+  }
+  .buttonContainer {
+    display: flex;
+    justify-content: center;
+    .buttonWrapper {
+      display: flex;
+      justify-content: space-between;
+      margin: 2.4rem;
+      width: 100%;
+      @media ($bp-sm) {
+        width: 50%;
+      }
+			@media ($bp-md) {
+				width: 70%;
+			}
+			@media ($bp-lg) {
+				width: 50%;
+			}
+
+      button {
+        margin-bottom: 0;
+        &:first-child {
+          margin-right: 1.2rem;
         }
       }
     }
