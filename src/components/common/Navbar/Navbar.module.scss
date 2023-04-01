@@ -1,5 +1,5 @@
-@import "@styles/variables.scss";
-@import "@styles/mixins.scss";
+@import "@styles/base/variables.scss";
+@import "@styles/base/mixins.scss";
 
 .navbar {
   @media ($bp-sm) {
@@ -82,10 +82,10 @@
       }
     }
   }
-	.desktopNav {
-		display: none;
-		@media ($bp-sm){
-			display: block;
-		}
-	}
+  .desktopNav {
+    display: none;
+    @media ($bp-sm) {
+      display: block;
+    }
+  }
 }

@@ -1,23 +1,11 @@
-import { useEffect, useState } from "react";
-import styles from "@styles/Home.module.scss";
+import { useRouter } from "next/router";
+import styles from "@styles/pages/Home.module.scss";
 import Image from "next/image";
 import CodeBlock from "@images/CodeBlock.jpg";
-import { useAppContext } from "@components/context/AppContext";
+import cn from "classnames";
 
 export default function HomePage() {
-  const [resumeButtonStyles, setResumeButtonStyles] =
-    useState("primary-outline");
-  const { windowWidth } = useAppContext();
-
-  useEffect(() => {
-    if (windowWidth >= 768) {
-      setResumeButtonStyles("");
-    } else {
-      if (resumeButtonStyles !== "primary-outline") {
-        setResumeButtonStyles("primary-outline");
-      }
-    }
-  }, [windowWidth]);
+  const router = useRouter();
 
   const porfolioName = "Devon Smith";
   const heroTextContent =
@@ -47,8 +35,25 @@ export default function HomePage() {
         </div>
         <div className={styles.buttonContainer}>
           <div className={styles.buttonWrapper}>
-            <button className={`${resumeButtonStyles}`}>Resume</button>
-            <button className={`primary-outline`}>Let's Chat</button>
+            <a
+              href="/Resume.pdf"
+              download="Devon Smith Resume"
+              className={cn(
+                "button primary-outline resume-button",
+                styles.resumeButton
+              )}
+            >
+              Resume
+            </a>
+            <button
+              className={cn(`primary-outline`, styles.chatButton)}
+              onClick={() => {
+                router.push("/contact");
+              }}
+            >
+              {/* &apos; is for ' */}
+              Let&apos;s Chat
+            </button>
           </div>
         </div>
       </div>

@@ -39,6 +39,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 
 Immediate TODOs:
-- Edit image size for larger screens 
-	- Touch left side, go until slightly under text block until it looks good
+- remove screen resize from context
+	- put back purely on nav
+	- change styling to be based on CSS
 - fix bug on desktop nav links that look for props to close nav window

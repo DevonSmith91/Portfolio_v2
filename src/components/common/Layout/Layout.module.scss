@@ -1,4 +1,4 @@
-@import "@styles/variables";
+@import "@styles/base/variables.scss";
 
 .layout {
   position: relative;
@@ -10,12 +10,12 @@
   overflow-x: hidden;
   background-color: $primary-background;
   main {
-		display: flex;
-		flex-direction: column;
-		flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
     max-width: 100vw;
     width: 100%;
-		overflow: hidden;
-		z-index: 1;
+    overflow: hidden;
+    z-index: 1;
   }
 }

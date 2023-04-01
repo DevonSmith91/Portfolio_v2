@@ -1,21 +1,13 @@
-import { createContext, useContext, useState, useEffect } from "react";
-import getWindowWidth from "@/utils/getWindowWidth";
+import { createContext, useContext, useState } from "react";
 
 const AppContext = createContext();
 
 export function AppContextProvider({ children }) {
-  const [windowWidth, setWindowWidth] = useState();
-
-  const currentWindowWidth = getWindowWidth();
-
-  useEffect(() => {
-    if (currentWindowWidth !== windowWidth) {
-      setWindowWidth(currentWindowWidth);
-    }
-  }, [currentWindowWidth]);
+  const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
 
   const values = {
-    windowWidth,
+    isSideMenuOpen,
+    setIsSideMenuOpen,
   };
 
   return <AppContext.Provider value={values}>{children}</AppContext.Provider>;

@@ -1,10 +1,10 @@
-@import "@/styles/variables.scss";
-@import "@/styles/mixins.scss";
+@import "@styles/base/variables.scss";
+@import "@styles/base/mixins.scss";
 
 .sideMenuContainer {
   position: absolute;
   background-color: $primary-background;
-	top: 9.7rem;
+  top: 9.7rem;
   bottom: 0;
   right: 0;
   left: 0;

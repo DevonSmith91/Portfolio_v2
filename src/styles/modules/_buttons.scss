@@ -1,4 +1,4 @@
-@import "./variables";
+@import "@styles/base/variables.scss";
 
 .button,
 button,
@@ -56,6 +56,21 @@ input[type="button"] {
     &:active {
       color: $outline-button-active-text-color;
       background-color: $outline-button-hover-background-active;
+    }
+    &.resume-button {
+      margin-right: 2.4rem;
+
+      @media ($bp-md) {
+        background-color: $primary-button-background-color;
+        color: $primary-button-text-color;
+        &:hover,
+        &:focus {
+          background-color: $primary-button-hover;
+        }
+        &:active {
+          background-color: $primary-button-active;
+        }
+      }
     }
   }
 

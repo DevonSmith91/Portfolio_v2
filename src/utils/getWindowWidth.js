@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
  * Function that reads the window width with internal delays
  * @param {number} time - length of delay if provided, otherwise defaults to 100ms
  */
-function getWindowWidth(time) {
+function GetWindowWidth(time) {
   const isBrowser = typeof window !== "undefined";
   const [width, setWidth] = useState(isBrowser ? window.innerWidth : 0);
 
@@ -40,4 +40,4 @@ function getWindowWidth(time) {
   return width;
 }
 
-export default getWindowWidth;
+export default GetWindowWidth;

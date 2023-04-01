@@ -1,0 +1,39 @@
+@import "@styles/base/variables.scss";
+
+.aboutWrapper {
+  display: flex;
+	flex: 1;
+	align-items: center;
+  margin: 0 2.4rem;
+  .aboutContent {
+    position: absolute;
+    background-color: red;
+    z-index: 10;
+    width: 63%;
+    padding: 2.4rem;
+    p {
+      margin-bottom: 0;
+    }
+  }
+  .imageWrapper {
+    max-height: 60rem;
+    width: 100%;
+    position: relative;
+		top: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    .imageContainer {
+      height: 0;
+      padding-bottom: 150%;
+      width: 100%;
+      max-width: 40rem;
+      position: relative;
+      .headshotImage {
+        object-fit: cover;
+        // object-position: center;
+        max-height: 60rem;
+      }
+    }
+  }
+}

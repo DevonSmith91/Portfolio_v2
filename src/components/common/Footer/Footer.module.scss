@@ -1,4 +1,4 @@
-@import "@styles/mixins.scss";
+@import "@styles/base/mixins.scss";
 
 .footer {
   align-items: center;
@@ -8,9 +8,9 @@
     .icon {
       height: 2.5rem;
       width: 2.5rem;
-			&:first-of-type{
-				margin-right: 2rem;
-			}
+      &:first-of-type {
+        margin-right: 2rem;
+      }
     }
   }
 }

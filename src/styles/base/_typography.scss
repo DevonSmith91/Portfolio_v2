@@ -108,6 +108,14 @@ p,
   }
 }
 
+@media ($bp-lg) {
+  p,
+  .p {
+    font-size: 2rem;
+    line-height: 2.4rem;
+  }
+}
+
 .body-large {
   @media ($bp-md) {
     font-size: 1.8rem;

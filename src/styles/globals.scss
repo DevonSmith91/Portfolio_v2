@@ -1,6 +1,6 @@
-@import "./variables";
-@import "./typography";
-@import "./buttons";
+@import "./base/variables.scss";
+@import "./base/typography.scss";
+@import "./modules/buttons.scss";
 
 * {
   box-sizing: border-box;

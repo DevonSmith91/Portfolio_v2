@@ -1,5 +1,5 @@
-@import "@styles/variables.scss";
-@import "@styles/mixins.scss";
+@import "@styles/base/variables.scss";
+@import "@styles/base/mixins.scss";
 
 .navLinkContainer {
   display: flex;
@@ -15,7 +15,7 @@
     justify-content: space-between;
     padding: 0 2.4rem 1.8rem;
     position: relative;
-		margin-top: unset;
+    margin-top: unset;
     :first-of-type {
       margin-left: 5%;
     }

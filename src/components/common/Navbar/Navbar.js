@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.scss";
 import cn from "classnames";
-import NavLinks from "../NavLinks/NavLinks";
+import { NavLinks } from "@components/common";
 
 const Navbar = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
   const handleSideMenu = (event, isSideMenuOpen) => {
@@ -13,10 +13,11 @@ const Navbar = ({ isSideMenuOpen, setIsSideMenuOpen }) => {
   return (
     <nav className={styles.navbar}>
       <div
+        className={cn(styles.hamburgerContainer, sideMenuClass)}
         onClick={(event) => handleSideMenu(event, isSideMenuOpen)}
+        onKeyDown={(event) => handleSideMenu(event, isSideMenuOpen)}
         role="button"
         tabIndex={0}
-        className={cn(styles.hamburgerContainer, sideMenuClass)}
       >
         <div className={`${styles.hamInner}`} />
       </div>
